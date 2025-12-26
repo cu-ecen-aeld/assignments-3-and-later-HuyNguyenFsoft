@@ -55,7 +55,8 @@ fi
 for i in $( seq 1 $NUMFILES)
 do
 	make clean
-	make
+	# make
+	make CROSS_COMPILE=aarch64-none-linux-gnu-
 	./writer "$WRITEDIR/${username}$i.txt" "$WRITESTR"
 done
 
